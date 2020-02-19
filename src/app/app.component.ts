@@ -12,25 +12,32 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent implements OnInit {
   public selectedIndex = 0;
   public appPages = [
+    
     {
-      title: 'work',
+      title: 'My Tasks',
+      url: '/tasks',
+      icon: 'hourglass'
+    },
+    {
+      title: 'Assisned Tasks',
       url: '/work',
       icon: 'briefcase'
+    },
+    {
+      title: 'Todo List',
+      url: '/todo',
+      icon: 'add-circle'
     },
     {
       title: 'notification',
       url: 'notification',
       icon: 'notifications'
     },
+    
     {
-      title: 'tasks',
-      url: '/tasks',
-      icon: 'hourglass'
-    },
-    {
-      title: 'todo',
-      url: '/todo',
-      icon: 'add-circle'
+      title: 'Team',
+      url: '/team',
+      icon: 'people'
     },
     {
       title: 'profile',

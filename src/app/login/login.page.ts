@@ -10,7 +10,7 @@ export class LoginPage implements OnInit {
 
   constructor(public navCtrl: NavController) { }
   nextpage(): void {
-    this.navCtrl.navigateForward('/work');
+    this.navCtrl.navigateForward('/tasks');
  }
   ngOnInit() {
   }

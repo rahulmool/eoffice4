@@ -19,14 +19,14 @@ export class TodoPage implements OnInit {
     
     
   }
-  async updateTask(index) {
+  async updateTask() {
     const alert = await this.alertCtrl.create({
       header: 'Update Task?',
       message: 'Type in your new task to update.',
       inputs: [{ name: 'editTask', placeholder: 'Task' }],
       buttons: [{ text: 'Cancel', role: 'cancel' },
       {
-        text: 'Update', handler: data => {
+        text: 'Update', handler: () => {
         }
       }
       ]
