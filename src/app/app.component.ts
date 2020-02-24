@@ -24,6 +24,11 @@ export class AppComponent implements OnInit {
       icon: 'briefcase'
     },
     {
+      title: 'Review Tasks',
+      url: '/review',
+      icon: 'warning'
+    },
+    {
       title: 'Todo List',
       url: '/todo',
       icon: 'add-circle'
@@ -34,16 +39,6 @@ export class AppComponent implements OnInit {
       icon: 'notifications'
     },
     
-    {
-      title: 'Team',
-      url: '/team',
-      icon: 'people'
-    },
-    {
-      title: 'profile',
-      url: '/profile',
-      icon: 'person'
-    }
   ];
   //public labels = ['Family', 'Friends', 'Notes', 'Work', 'Travel', 'Reminders'];
 

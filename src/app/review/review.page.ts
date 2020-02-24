@@ -2,11 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { AlertController } from '@ionic/angular';
 
 @Component({
-  selector: 'app-notification',
-  templateUrl: './notification.page.html',
-  styleUrls: ['./notification.page.scss'],
+  selector: 'app-review',
+  templateUrl: './review.page.html',
+  styleUrls: ['./review.page.scss'],
 })
-export class NotificationPage implements OnInit {
+export class ReviewPage implements OnInit {
+
   public items=[
     ["warning","assets/male.png","Rahul","do Assignement","23/04/2020"],
     ["warning","assets/female.png","Hauva","check papers","23/04/2020"],
@@ -50,13 +51,19 @@ export class NotificationPage implements OnInit {
   async infowarning(item ):Promise<void>{
     
     const alert = await this.alertController.create({
-      header: item[2]+" sent you a Reminder:",
+      header: item[2],
 
       message: item[3]+"<br/> Deadline is " +item[4] ,
       buttons: [
-        {
-          text: 'ok',
+      {
+        text: 'Approve', handler: () => {
         }
+      },
+      {
+        text: 'Reassign Task', handler: () => {
+        }
+      },
+      { text: 'Cancel', role: 'cancel' },
       ]
     });
 

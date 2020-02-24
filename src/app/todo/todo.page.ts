@@ -14,7 +14,7 @@ export class TodoPage implements OnInit {
     this.taskList.push("write 7th practical");
     this.taskList.push("Install ionic");
     this.taskList.push("buy manual");
-    this.taskList.push("write cn assigenment");
+    this.taskList.push("write cn tutorial");
     
     
     

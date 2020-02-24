@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ToastController, NavController, AlertController } from '@ionic/angular';
+import { async } from '@angular/core/testing';
 
 @Component({
   selector: 'app-work',
@@ -67,9 +68,26 @@ export class WorkPage implements OnInit {
 
       message: item[3]+"<br/> Deadline is " +item[4] ,
       buttons: [
-        {
-          text: 'ok',
+        
+      {
+        text: 'Remove Task', handler: async() => {
+          const toast = await this.toastController.create({
+            message: 'Task Removed',
+            duration: 2000
+          });
+          toast.present();
         }
+      },
+      {
+        text: 'Send Reminder', handler: async() => {
+          const toast = await this.toastController.create({
+            message: 'Reminder Send',
+            duration: 2000
+          });
+          toast.present();
+        }
+      },
+      { text: 'Cancel', role: 'cancel' },
       ]
     });
 

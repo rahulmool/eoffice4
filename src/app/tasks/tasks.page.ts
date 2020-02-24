@@ -31,10 +31,12 @@ export class TasksPage implements OnInit {
       header: item[2]+" sent you a task with "+item[0]+" reminders :",
 
       message: item[3]+"<br/> Deadline is " +item[4] ,
-      buttons: [
-        {
-          text: 'ok',
-        }
+      buttons: [{ text: 'Cancel', role: 'cancel' },
+      {
+        text: 'Submit', handler: () => {
+          console.log('the submit button is working');
+        },
+      }
       ]
     });
 
