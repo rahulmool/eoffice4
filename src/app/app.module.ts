@@ -9,13 +9,33 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 
+
+import {FirebaseUIModule, firebase, firebaseui} from 'firebaseui-angular';
+import { environment } from 'src/environments/environment';
+
+
+import {AngularFireModule} from '@angular/fire';
+import {AngularFireAuthModule} from '@angular/fire/auth';
+
+const firebaseUiAuthConfig: firebaseui.auth.Config = {
+  signInFlow: 'redirect',
+  signInOptions: [
+    firebase.auth.GoogleAuthProvider.PROVIDER_ID, ],
+  tosUrl: '/terms',
+  privacyPolicyUrl: '/privacy',
+  credentialHelper: firebaseui.auth.CredentialHelper.ACCOUNT_CHOOSER_COM
+};
+
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [
     BrowserModule,
     IonicModule.forRoot(),
-    AppRoutingModule
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFireAuthModule,
+    FirebaseUIModule.forRoot(firebaseUiAuthConfig)
   ],
   providers: [
     StatusBar,

@@ -50,6 +50,18 @@ const routes: Routes = [
   {
     path: 'review',
     loadChildren: () => import('./review/review.module').then( m => m.ReviewPageModule)
+  },
+  {
+    path: 'terms',
+    loadChildren: () => import('./terms/terms.module').then( m => m.TermsPageModule)
+  },
+  {
+    path: 'privacy',
+    loadChildren: () => import('./privacy/privacy.module').then( m => m.PrivacyPageModule)
+  },
+  {
+    path: 'logout',
+    loadChildren: () => import('./logout/logout.module').then( m => m.LogoutPageModule)
   }
 ];
 

@@ -28,7 +28,7 @@ export class TasksPage implements OnInit {
   async info(item ):Promise<void>{
     
     const alert = await this.alertController.create({
-      header: item[2]+" sent you a task with "+item[0]+" reminders :",
+      header: item[2]+" sent you a task:",
 
       message: item[3]+"<br/> Deadline is " +item[4] ,
       buttons: [{ text: 'Cancel', role: 'cancel' },
